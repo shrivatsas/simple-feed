@@ -1,0 +1,23 @@
+version: "3.3"
+
+services: 
+  db:
+    image: redis:6.0.9-alpine
+    command: redis-server --appendonly yes
+    volumes:
+      - db-data:/data
+    env_file:
+      - .env
+
+  server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    env_file:
+      - .env
+
+volumes:
+  db-data:
+    external: true

@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["Shrivatsa"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.62.0"
+uvicorn = "^0.12.3"
+redis = "^3.5.3"
+python-dotenv = "^0.15.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
