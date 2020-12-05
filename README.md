@@ -21,3 +21,7 @@ A simple CRUD system which stores unicode text messages posted to the system and
 3. Add a `locust` script to performance test
 4. Add `pytest` unit tests to validate the business logic
 5. Add `hypothesis` to trial property-based testing
+
+### Alternative solutions
+1. Use `nginx` infront of `Elasticsearch` for similar functionlity
+2. Explore `tarantool` with its embedded http client support
