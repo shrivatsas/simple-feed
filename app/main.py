@@ -14,16 +14,16 @@ async def startup():
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"message": "hit /message to get data feeds"}
 
 
-@app.get("/page/all")
+@app.get("/message/all")
 def read_item():
     rnge = (0, - 1)
     return app.state.redis.zrange(settings.FEED_SET, *rnge, withscores=True)
 
 
-@app.get("/page")
+@app.get("/message")
 def read_item(page_no: Optional[int] = Header(0)):
     rnge = getNextPage(page_no)
     return app.state.redis.zrange(settings.FEED_SET, *rnge)
