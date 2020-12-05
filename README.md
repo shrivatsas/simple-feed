@@ -4,7 +4,7 @@ A simple CRUD system which stores unicode text messages posted to the system and
 
 ### Components used
 1. Python FastAPI framework  
-2. Redis (persistance) 
+2. Redis (sorted set + persistance) 
 3. Poetry dependency management
 4. Docker  
 5. OpenAPI and Redoc  

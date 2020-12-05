@@ -26,7 +26,7 @@ def read_item():
 @app.get("/message")
 def read_item(page_no: Optional[int] = Header(0)):
     rnge = getNextPage(page_no)
-    return app.state.redis.zrange(settings.FEED_SET, *rnge)
+    return app.state.redis.zrange(settings.FEED_SET, *rnge, withscores=True)
 
 
 @app.post("/message", response_model=FeedItem, status_code=status.HTTP_201_CREATED)
