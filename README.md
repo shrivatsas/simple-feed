@@ -25,3 +25,9 @@ A simple CRUD system which stores unicode text messages posted to the system and
 ### Alternative solutions
 1. Use `nginx` infront of `Elasticsearch` for similar functionlity
 2. Explore `tarantool` with its embedded http client support
+
+### Developer setup
+1. `git clone` the repository
+2. Setup `poetry` `curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -`
+3. `poetry install`
+4. Running pylint `pylint app`
